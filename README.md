@@ -70,24 +70,16 @@ for link in soup.find_all('a'):
 ```
 # Example
 
+```bash
+# filter Anchor---> 
+allNews = soup.findAll('div', class_='sc-16r8icm-0 eMxKgr container')
+for news_item in allNews:
+    if news_item.find('a', class_='sc-1eb5slv-0 sc-1308828-0 bwAAhr cmc-link') is not None:
+        filteredNews.append(news_item.text)
+for filteredParagraphs in filteredNews:
+    print(f"{filteredParagraphs = }")
+```
 
-
-
-
-
-
-
-
-
-
-
-Running the unit tests
-
-Beautiful Soup supports unit test discovery from the project root directory:
-
-$ nosetests
-
-$ python3 -m unittest discover -s bs4
 
 
 
