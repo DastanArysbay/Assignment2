@@ -1,7 +1,7 @@
 # Web Scrapping tool for Cryptocurrencies
 Arysbay Dastan (SE-2004)
 
-# Installation
+# Installing
 Selenium
 ```bash
 pip install -U selenium
@@ -15,9 +15,38 @@ Beautifulsoup
 pip install beautifulsoup4
 ```
 
-To make geckodriver available to the entire system, open the terminal application and run the following command:
+### Downloading geckodriver
+
+The geckodriver executable can be downloaded [here](https://github.com/SeleniumHQ/selenium/blob/trunk/py/docs/source/index.rst)
+
+#### Python3 venv
+
+Download the geckodriver executable from the above link and extract it to env/bin/ to make it accessible to only the virtual environment.
+
+In your python code, you will now be able to do the following:
 ```bash
-brew install geckodrive
+from selenium import webdriver
+
+browser = webdriver.Firefox()
+browser.get("https://stackoverflow.com/")
+```
+
+#### Linux
+
+If you would like to make it available system wide, download the geckodriver executable from the above link and extract it to `/usr/bin/` (or anything inside of your $PATH)
+
+#### Windows
+
+Note: *this needs a windows user to test and confirm*
+
+Download geckodriver from the above link and extract it to `C:\Windows\System32\` (or anything inside your Path environment variable).
+
+#### Mac OS X
+
+
+To make geckodriver available system wide, open up your Terminal App and perform the following command:
+```bash
+brew install geckodriver
 ```
 
 # Usage examples
