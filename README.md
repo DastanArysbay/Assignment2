@@ -6,7 +6,10 @@ Selenium
 ```bash
 pip install -U selenium
 ```
-
+Alternately, you can download the source distribution from PyPI (e.g. selenium-4.0.0rc3.tar.gz), unarchive it, and run:
+```bash
+python setup.py install
+```
 Beautifulsoup
 ```bash
 pip install beautifulsoup4
